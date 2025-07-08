@@ -62,10 +62,13 @@ public class AppStartUp {
 
 
 //         test insufficient stock
-//         Uncommenting the following line will throw an exception
-//         System.out.println("\n\nBuying PaperBook: " + book2.getTitle());
-//         price = bookService.buyBook(book2, "Shebin El Kom", 10);
-//         System.out.println( "Amount paid = " + price + " USD");
+         try {
+             System.out.println("\n\nBuying PaperBook: " + book2.getTitle());
+             price = bookService.buyBook(book2, "Shebin El Kom", 10);
+             System.out.println( "Amount paid = " + price + " USD");
+         } catch (Exception e) {
+             System.out.println(e.getMessage());
+         }
 
         // buy Ebook
         System.out.println("\n\nBuying Ebook: " + book6.getTitle());
@@ -74,11 +77,14 @@ public class AppStartUp {
 
 
         // buy DemoBook
-        // Uncommenting the following line will throw an exception
 
-//         System.out.println("\n\nBuying DemoBook: " + book11.getTitle());
-//         price = bookService.buyBook(book11, "Shebin El Kom", 3);
-//         System.out.println( "Amount paid = " + price + " USD");
+         try {
+             System.out.println("\n\nBuying DemoBook: " + book11.getTitle());
+             price = bookService.buyBook(book11, "Shebin El Kom", 3);
+             System.out.println( "Amount paid = " + price + " USD");
+         }catch (Exception e) {
+             System.out.println(e.getMessage());
+         }
 
 
         //  delete outdated books
